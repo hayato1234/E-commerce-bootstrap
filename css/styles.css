@@ -23,4 +23,9 @@ h1, h2, h3 {
   background-color: rgba(192, 192, 192, 0.2);
 }
 
+.site-footer {
+  background-color: #F7DD67;
+  padding: 20px 0;
+}
+
 /*# sourceMappingURL=styles.css.map */
