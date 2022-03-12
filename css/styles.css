@@ -17,4 +17,10 @@ h1, h2, h3 {
   background-color: #abd31c;
 }
 
+.item-list-price {
+  position: absolute;
+  right: 0;
+  background-color: rgba(192, 192, 192, 0.2);
+}
+
 /*# sourceMappingURL=styles.css.map */

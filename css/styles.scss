@@ -24,3 +24,9 @@ h1, h2, h3 {
 .navbar{
     background-color: $color-mid;
 }
+
+.item-list-price{
+    position: absolute;
+    right: 0;
+    background-color: rgb(192,192,192,0.2);
+}
