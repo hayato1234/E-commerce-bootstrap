@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- build:css css/main.css -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- endbuild -->
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen&family=Roboto:wght@100&display=swap" >
-
-    <title>Rebuild Electronics: Rebuild our system</title>
+     <!-- build:css css/main.css -->
+     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+     <link rel="stylesheet" href="css/styles.css">
+     <!-- endbuild -->
+ 
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen&family=Roboto:wght@100&display=swap" >
+ 
+     <title>Rebuild Electronics: Rebuild our system</title>
 </head>
 <body>
     <!-- header -->
@@ -52,7 +51,7 @@
             </button>
             <div class="collapse navbar-collapse" id="reNavbar">
                 <ul class="navbar-nav">
-                    <li class="navbar-item active"><a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                     <li class="navbar-item"><a class="nav-link" href="#"><i class="fa fa-cube" aria-hidden="true"></i> Sell/Donate</a></li>
                     <li class="navbar-item"><a class="nav-link" href="#"><i class="fa fa-certificate" aria-hidden="true"></i> Official Goods</li></a>
                     <li class="navbar-item"><a class="nav-link" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a></li>
@@ -62,10 +61,23 @@
         </div>
     </nav>
 
-    <!-- main content -->
+    <!-- main container  -->
     <div class="container">
-        <!-- search bar  -->
-        <div class="form-row align-items-center mt-4">
+        <!-- breadcrumb row  -->
+        <div class="row">
+            <div class="col">
+                <nav class="breadcrumb">
+                    <a class="breadcrumb-item" href="index.html">Home</a>
+                    <a class="breadcrumb-item" href="#">Camera and Photo</a>
+                    <span class="breadcrumb-item active">Nikon D-22</span>
+                </nav>
+            </div>
+        </div>
+
+        
+
+         <!-- search bar  -->
+         <div class="form-row align-items-center mt-4">
             
             <div class="col-6 mx-auto">
                 <div class="form-inline">
@@ -79,95 +91,27 @@
 
         <hr>
 
-        <!-- item cards  -->
-        <div class="row">
-            <div class="card-deck">
-                <div class="card border-success">
-                    <div class="card-body">
-                        <img class="d-flex img-fluid" src="img/camera.jpg" alt="camera image">
-                        <div class="card-img-overlay">
-                            <h4 class="item-list-price mr-1">$15</h4>
-                        </div>
+        <!-- item info  -->
+        <div class="row mt-5">
+            <div class="col">
+                <div class="media">
+                    <img src="img/camera.jpg" alt="item picture" class="d-flex">
+                    <div class="media-body ml-5">
+                        <h1>Nikon EOS DSLR</h1>
+                        <h2 >$15</h2>
+                        <button class="btn btn-warning my-4">Add to Cart</button>
+                        <hr>
+                        <p id="item-detail-brand-text">Brand: Nikon</p>
+                        <p id="item-detail-condition-text">Condition: Great</p>
+                        <p id="item-detail-model-text">Model: N-EOS-442</p>
+                        <p id="item-detail-year-text">Year: 2021</p>
+                        <p id="item-detail-comment-text">Comment: the main screen has been replaced with brand new parts.</p>
                     </div>
-                    <div class="card-footer">
-                        <h5>Camera</h3>
-                        <p>Nikon</p>
-                    </div>
-                    <a href="item-detail.html" class="stretched-link"></a>
-                </div>
-                <div class="card border-success">
-                    <div class="card-body">
-                        <img class="d-flex img-fluid" src="img/elec-kettle.jpg" alt="kettle image">
-                        <div class="card-img-overlay">
-                            <h4 class="item-list-price mr-1">$5</h4>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <h5>Electric Kettle</h3>
-                        <p>T-fal</p>
-                    </div>
-                    <a href="#" class="stretched-link"></a>
-                </div>
-                <div class="card border-success">
-                    <div class="card-body">
-                        <img class="d-flex img-fluid" src="img/port-ac2.jpeg" alt="camera image">
-                        <div class="card-img-overlay">
-                            <h4 class="item-list-price mr-1">$80</h4>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <h5>Portable Air Conditioner</h3>
-                        <p>LG</p>
-                    </div>
-                    <a href="#" class="stretched-link"></a>
-                </div>
-                
-            </div>
-
-            <div class="card-deck mt-2">
-                <div class="card border-success">
-                    <div class="card-body">
-                        <img class="d-flex img-fluid" src="img/vac.jpeg" alt="camera image">
-                        <div class="card-img-overlay">
-                            <h4 class="item-list-price mr-1">$120</h4>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <h5>Vacuum cleaner</h3>
-                        <p>Dyson</p>
-                    </div>
-                    <a href="#" class="stretched-link"></a>
-                </div>
-                <div class="card border-success">
-                    <div class="card-body">
-                        <img class="d-flex img-fluid" src="img/ipad-air.jpeg" alt="camera image">
-                        <div class="card-img-overlay">
-                            <h4 class="item-list-price mr-1">$200</h4>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <h5>Tablet (iPad air)</h3>
-                        <p>Apple</p>
-                    </div>
-                    <a href="#" class="stretched-link"></a>
-                </div>
-                <div class="card border-success">
-                    <div class="card-body">
-                        <img class="d-flex img-fluid" src="img/humidfier.jpeg" alt="camera image">
-                        <div class="card-img-overlay">
-                            <h4 class="item-list-price mr-1">$80</h4>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <h5>Humidifier</h3>
-                        <p>Vicks</p>
-                    </div>
-                    <a href="#" class="stretched-link"></a>
                 </div>
             </div>
+            
         </div>
     </div>
-
     <footer class="site-footer mt-4">
         <div class="container">
             <div class="row">
