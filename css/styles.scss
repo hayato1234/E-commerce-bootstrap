@@ -29,6 +29,10 @@ h1, h2, h3 {
     background-color: white;
 }
 
+.carousel{
+    border: solid $color-secondary;
+}
+
 .item-list-price{
     position: absolute;
     right: 0;
