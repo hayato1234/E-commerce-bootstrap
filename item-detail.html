@@ -68,8 +68,8 @@
             <div class="col">
                 <nav class="breadcrumb">
                     <a class="breadcrumb-item" href="index.html">Home</a>
-                    <a class="breadcrumb-item" href="#">Camera and Photo</a>
-                    <span class="breadcrumb-item active">Nikon D-22</span>
+                    <a id="breadc-category" class="breadcrumb-item" href="#">Camera and Photo</a>
+                    <span id="breadc-title" class="breadcrumb-item active">Nikon D-22</span>
                 </nav>
             </div>
         </div>
@@ -95,17 +95,17 @@
         <div class="row mt-5">
             <div class="col">
                 <div class="media">
-                    <img src="img/camera.jpg" alt="item picture" class="d-flex">
+                    <img id="detail-main-img" src="img/camera.jpg" alt="item picture" class="d-flex img-fluid w-50">
                     <div class="media-body ml-5">
-                        <h1>Nikon EOS DSLR</h1>
-                        <h2 >$15</h2>
+                        <h1 id="title">Title</h1>
+                        <h2 id="price" >Price</h2>
                         <button class="btn btn-warning my-4">Add to Cart</button>
                         <hr>
-                        <p id="item-detail-brand-text">Brand: Nikon</p>
-                        <p id="item-detail-condition-text">Condition: Great</p>
-                        <p id="item-detail-model-text">Model: N-EOS-442</p>
-                        <p id="item-detail-year-text">Year: 2021</p>
-                        <p id="item-detail-comment-text">Comment: the main screen has been replaced with brand new parts.</p>
+                        <p id="item-detail-brand-text">Brand: </p>
+                        <p id="item-detail-condition-text">Condition: </p>
+                        <p id="item-detail-model-text">Model: </p>
+                        <p id="item-detail-year-text">Year: </p>
+                        <p id="item-detail-comment-text">Comment: </p>
                     </div>
                 </div>
             </div>
@@ -144,6 +144,8 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="js/item-detail-page.js" type="module"></script>
 
 </body>
 </html>
