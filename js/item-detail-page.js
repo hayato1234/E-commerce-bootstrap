@@ -10,7 +10,10 @@ const brand = document.querySelector("#item-detail-brand-text");
 const condition = document.querySelector("#item-detail-condition-text");
 const model = document.querySelector("#item-detail-model-text");
 const year = document.querySelector("#item-detail-year-text");
-const comment = document.querySelector("#item-detail-comment-text");       
+const comment = document.querySelector("#item-detail-comment-text"); 
+const addCartButton = document.querySelector("#item-detail-add-cart"); 
+addCartButton.addEventListener("click",addCartClicked);
+
 
 function setItemList(){
     const item1 = new Item("Nikon EOS DSLR","img/camera.jpg",15,"Nikon","Great","N-EOS-442",2006,"the main screen has been replaced with brand new parts.");
@@ -39,3 +42,11 @@ function setUpDetailPage(){
 }
 
 setUpDetailPage();
+
+function addCartClicked(){
+    let cartBtn = this;
+    cartBtn.classList.add("clicked");
+}
+
+
+

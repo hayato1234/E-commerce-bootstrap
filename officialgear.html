@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- build:css css/main.css -->
-     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-     <link rel="stylesheet" href="css/styles.css">
-     <!-- endbuild -->
- 
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen&family=Roboto:wght@100&display=swap" >
- 
-     <title>Rebuild Electronics: Rebuild our system</title>
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen&family=Roboto:wght@100&display=swap" >
+
+    <title>Rebuild Electronics: Rebuild our system</title>
 </head>
 <body>
     <!-- header -->
-    <!-- <header class="jumbotron jumbotron-fluid">
-        <div class="container">
+    <header class="jumbotron jumbotron-fluid" style="background-image: url(img/Screen\ Shot\ 2022-03-09\ at\ 16.03.04.png); background-size: cover;">
+        <div class="container" >
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2">
                     <img src="img/Rebuild Electronics-logos.jpeg" alt="RE logo" class="img-fluid">
                 </div>
                 <div class="col align-self-center">
-                    <h1>Rebuild Electronics</h1>
+                    <!-- <h1>Rebuild Electronics</h1> -->
                 </div>
                 <div class="dropdown mt-2">
                     <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-    </header> -->
+    </header>
 
     <!-- nav bar -->
     <nav class="navbar navbar-expand-sm navbar-light sticky-top">
@@ -53,7 +53,7 @@
                 <ul class="navbar-nav">
                     <li class="navbar-item"><a class="nav-link" href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                     <li class="navbar-item"><a class="nav-link" href="#"><i class="fa fa-cube" aria-hidden="true"></i> Sell/Donate</a></li>
-                    <li class="navbar-item"><a class="nav-link" href="officialgear.html"><i class="fa fa-certificate" aria-hidden="true"></i> Official Gear</li></a>
+                    <li class="navbar-item active"><a class="nav-link" href="#"><i class="fa fa-certificate" aria-hidden="true"></i> Official Gear</li></a>
                     <li class="navbar-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a></li>
                 </ul>
                 <span class="navbar-text ml-auto">
@@ -66,49 +66,22 @@
         </div>
     </nav>
 
-    <!-- main container  -->
-    <div class="container">
-        <!-- breadcrumb row  -->
+    <div class="container mt-5">
         <div class="row">
-            <div class="col">
-                <nav class="breadcrumb">
-                    <a class="breadcrumb-item" href="index.html">Home</a>
-                    <a id="breadc-category" class="breadcrumb-item" href="#">Camera and Photo</a>
-                    <span id="breadc-title" class="breadcrumb-item active">Nikon D-22</span>
-                </nav>
-            </div>
-        </div>
-
-         <!-- search bar  -->
-         <div class="form-row align-items-center mt-4">
-            <div class="col-6 mx-auto">
-                <div class="form-inline">
-                    <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Search for items...">
-                        <button class="btn btn-sm btn-secondary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </div>
+            <div class="card w-50 p-5">
+                <img class="card-img-top img-fluid" src="img/Gear-tshirt.png" alt="logo t-shirt">
+                <div class="card-body">
+                    <h4 class="card-title">T-shirt</h4>
+                    <p class="card-text">$30</p>
+                    <button class="btn btn-warning my-4">Add to Cart</button>
                 </div>
             </div>
-        </div>
-
-        <hr>
-
-        <!-- item info  -->
-        <div class="row mt-5">
-            <div class="col">
-                <div class="media">
-                    <img id="detail-main-img" src="img/camera.jpg" alt="item picture" class="d-flex img-fluid w-50">
-                    <div class="media-body ml-5">
-                        <h1 id="title">Title</h1>
-                        <h2 id="price" >Price</h2>
-                        <button id="item-detail-add-cart" class="btn btn-warning my-4">Add to Cart</button>
-                        <hr>
-                        <p id="item-detail-brand-text">Brand: </p>
-                        <p id="item-detail-condition-text">Condition: </p>
-                        <p id="item-detail-model-text">Model: </p>
-                        <p id="item-detail-year-text">Year: </p>
-                        <p id="item-detail-comment-text">Comment: </p>
-                    </div>
+            <div class="card w-50 p-5">
+                <img class="card-img-top img-fluid" src="img/gear_mug.png" alt="logo mug">
+                <div class="card-body">
+                    <h4 class="card-title">Mug</h4>
+                    <p class="card-text">$15</p>
+                    <button class="btn btn-warning my-4">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -148,7 +121,6 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script src="js/item-detail-page.js" type="module"></script>
-
+    
 </body>
 </html>
