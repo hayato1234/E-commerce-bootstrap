@@ -13,6 +13,7 @@ const year = document.querySelector("#item-detail-year-text");
 const comment = document.querySelector("#item-detail-comment-text"); 
 const addCartButton = document.querySelector("#item-detail-add-cart"); 
 addCartButton.addEventListener("click",addCartClicked);
+const addCartBtnTxt = document.querySelector("#item-detail-add-cart-text");
 
 
 function setItemList(){
@@ -46,6 +47,7 @@ setUpDetailPage();
 function addCartClicked(){
     let cartBtn = this;
     cartBtn.classList.add("clicked");
+    addCartBtnTxt.innerHTML = "Added";
 }
 
 
