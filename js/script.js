@@ -1,5 +1,19 @@
 import {Item} from "./item.js"
 
+$(function(){
+    $("#loginButton").on("click",function(){
+        $("#loginModal").modal("show");
+    })
+    $('#loginPassword').on("change",function(){
+        if($('#loginEmail').val() != ''){
+            $('#loginBtn').attr('disabled', false);
+        } else{
+            $('#loginBtn').attr('disabled', true);
+        }
+    })
+})
+
+
 const card_item_deck_container = document.querySelector("#card-deck-container");
 
 let itemList = [];
@@ -15,7 +29,6 @@ function setItemList(){
 }
 
 setItemList();
-
 
 //make item card deck
 function setUpItemCards(){
