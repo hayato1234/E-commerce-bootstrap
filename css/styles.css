@@ -16,6 +16,10 @@ h1, h2, h3 {
 .navbar {
   background-color: #abd31c;
 }
+.navbar .fa-shopping-cart {
+  font-size: 2rem;
+  color: #3046C5;
+}
 
 .breadcrumb {
   background-color: white;

@@ -3,6 +3,7 @@ $color-secondary: #009C9E;
 $color-pale: #CEC8FF;
 $color-mid: #abd31c;
 $color-dark: #F7DD67;
+$color-buy: #ffc107;
 $body-font: "Open Sans", sans-serif;
 $header-font: 'Oxygen', sans-serif;
 
@@ -23,6 +24,10 @@ h1, h2, h3 {
 
 .navbar{
     background-color: $color-mid;
+    .fa-shopping-cart{
+        font-size: 2rem;
+        color: $color-primary;
+    }
 }
 
 .breadcrumb{

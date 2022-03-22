@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- build:css css/main.css -->
-     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-     <link rel="stylesheet" href="css/styles.css">
-     <!-- endbuild -->
- 
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen&family=Roboto:wght@100&display=swap" >
- 
-     <title>Rebuild Electronics: Rebuild our system</title>
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen&family=Roboto:wght@100&display=swap" >
+
+    <title>Rebuild Electronics: Rebuild our system</title>
 </head>
 <body>
     <!-- header -->
-    <!-- <header class="jumbotron jumbotron-fluid">
+    <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2">
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-    </header> -->
+    </header>
 
     <!-- nav bar -->
     <nav class="navbar navbar-expand-sm navbar-light sticky-top">
@@ -52,13 +52,13 @@
             <div class="collapse navbar-collapse" id="reNavbar">
                 <ul class="navbar-nav">
                     <li class="navbar-item"><a class="nav-link" href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                    <li class="navbar-item"><a class="nav-link" href="userform.html"><i class="fa fa-cube" aria-hidden="true"></i> Sell/Donate</a></li>
+                    <li class="navbar-item active"><a class="nav-link" href="#"><i class="fa fa-cube" aria-hidden="true"></i> Sell/Donate</a></li>
                     <li class="navbar-item"><a class="nav-link" href="officialgear.html"><i class="fa fa-certificate" aria-hidden="true"></i> Official Gear</li></a>
                     <li class="navbar-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a></li>
                 </ul>
                 <span class="navbar-text ml-auto">
                     <a role="button">
-                        <i class="fa fa-shopping-cart" style="font-size: 2rem;"></i>
+                        <i class="fa fa-shopping-cart" ></i>
                     </a>
                 </span>
             </div>
@@ -66,58 +66,59 @@
         </div>
     </nav>
 
-    <!-- main container  -->
-    <div class="container">
-        <!-- breadcrumb row  -->
+    <div class="container mt-5">
         <div class="row">
-            <div class="col">
-                <nav class="breadcrumb">
-                    <a class="breadcrumb-item" href="index.html">Home</a>
-                    <a id="breadc-category" class="breadcrumb-item" href="#">Camera and Photo</a>
-                    <span id="breadc-title" class="breadcrumb-item active">Nikon D-22</span>
-                </nav>
+            <div class="col-12">
+                <h2>Send your electronics' information!</h2>
+                <hr />
             </div>
-        </div>
-
-         <!-- search bar  -->
-         <div class="form-row align-items-center mt-4">
-            <div class="col-6 mx-auto">
-                <div class="form-inline">
-                    <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Search for items...">
-                        <button class="btn btn-sm btn-secondary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <div class="col-md-10">
+                <div class="form-group row">
+                    <label for="firstName" class="col-md-2 col-form-label">First Name</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <hr>
-
-        <!-- item info  -->
-        <div class="row mt-5">
-            <div class="col">
-                <div class="media">
-                    <img id="detail-main-img" src="img/camera.jpg" alt="item picture" class="d-flex img-fluid w-50">
-                    <div class="media-body ml-5">
-                        <h1 id="title">Title</h1>
-                        <h2 id="price" >Price</h2>
-                        <button id="item-detail-add-cart" class="btn btn-warning my-4">
-                            <i class="fa fa-shopping-cart"></i>
-                            <span id="item-detail-add-cart-text">Add to Cart</span>
-                        </button>
-                        <hr>
-                        <p id="item-detail-brand-text">Brand: </p>
-                        <p id="item-detail-condition-text">Condition: </p>
-                        <p id="item-detail-model-text">Model: </p>
-                        <p id="item-detail-year-text">Year: </p>
-                        <p id="item-detail-comment-text">Comment: </p>
+                <div class="form-group row">
+                    <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
                     </div>
                 </div>
+                <div class="form-group row">
+                    <label for="areaCode" class="col-md-2  col-form-label">Contact Tel.</label>
+                    <div class="col-5 col-md-3">
+                        <input type="text" class="form-control" id="areaCode" name="areaCode" placeholder="Area Code">
+                        <input type="text" class="form-control" name="telNum" placeholder="Tel Num.">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-md-2 col-form-label">Email</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="user_image">Attach photos</label>
+                    <input type="file" id="user_image" name="user_image" class="form-control-file">
+                </div>
+               
+               <div class="form-group row">
+                    <label for="feedback" class="col-md-4 col-form-label">Description/Comments</label>
+                    <div class="col-md-10">
+                        <textarea class="form-control" name="feedback" id="feedback" rows="8"></textarea>
+                    </div>
+               </div>
+               <div class="form-group row">
+                   <div class="col-md-10 offset-md-2">
+                        <button type="submit" class="btn btn-primary">Submit Information</button>
+                   </div>
+                </div>
             </div>
-        </div>
+       </div>
     </div>
 
-    <!-- footer  -->
     <footer class="site-footer mt-4">
         <div class="container">
             <div class="row">
@@ -126,7 +127,7 @@
                     <ul class="list-unstyled">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="aboutus.html">About</a></li>
-                        <li><a href="userform.html">Sell/Donate</a></li>
+                        <li><a href="#">Sell/Donate</a></li>
                         <li><a href="contactus.html">Officail Goods</a></li>
                     </ul>
                 </div>
@@ -145,13 +146,11 @@
         </div>
     </footer>
 
-
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <script src="js/item-detail-page.js" type="module"></script>
-
+    <script src="js/script.js" type="module"></script>
+    
 </body>
 </html>
