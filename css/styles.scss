@@ -38,6 +38,16 @@ h1, h2, h3 {
     border: solid $color-secondary;
 }
 
+.card{
+    img{
+        width: 90%;
+    }
+
+    img.hovering{
+        width: 100%;
+    }
+}
+
 .item-list-price{
     position: absolute;
     right: 0;

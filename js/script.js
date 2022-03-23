@@ -11,6 +11,10 @@ $(function(){
             $('#loginBtn').attr('disabled', true);
         }
     })
+    $("#placeOrderBtn").on("click",function(){
+        alert("Placed your order!");
+        window.location.href = "index.html";
+    })
 })
 
 
@@ -58,6 +62,8 @@ function createCard(index,cardGroup){
     newItemCard.setAttribute("role","button");
     newItemCard.setAttribute("data-item-id",index);
     newItemCard.addEventListener("click",itemClicked);
+    newItemCard.addEventListener("mouseover",cardHover);
+    newItemCard.addEventListener("mouseleave",cardHoverOut);
     
     const newItemBody = document.createElement("div");
     newItemBody.classList.add("card-body");
@@ -76,6 +82,22 @@ function createCard(index,cardGroup){
     newItemPrice.innerText= "$"+itemList[index].price;
     newItemPrice.classList.add("item-list-price","mr-1");
     newItemImgOverlay.appendChild(newItemPrice);
+
+    const favHolder = document.createElement("a");
+    favHolder.setAttribute("role","button");
+    // favHolder.setAttribute("style","display:none");
+    favHolder.addEventListener("mouseover",function(){
+        newItemCard.removeEventListener("click",itemClicked);
+    });
+    favHolder.addEventListener("mouseleave",function(){
+        newItemCard.addEventListener("click",itemClicked);
+    });
+    favHolder.addEventListener("click",favToggle);
+    const favIcon = document.createElement("i");
+    favIcon.classList.add("fa","fa-heart-o");
+    favIcon.setAttribute("style","font-size: 2rem; color: pink");
+    favHolder.appendChild(favIcon);
+    newItemImgOverlay.appendChild(favHolder);
     
     const newItemFooter = document.createElement("div");
     newItemFooter.classList.add("card-footer");
@@ -88,21 +110,42 @@ function createCard(index,cardGroup){
     const newItemBrand = document.createElement("p");
     newItemBrand.innerText = itemList[index].brand;
     newItemFooter.appendChild(newItemBrand);
-
-    // const newItemLink = document.createElement("a");
-    // newItemLink.setAttribute("href","#");
-    // newItemLink.classList.add("stretched-link");
-    // newItemCard.appendChild(newItemLink); 
-
-    // newItemCard.addEventListener("click",itemClicked)
     
     cardGroup.appendChild(newItemCard);
-    // newItemCard.addEventListener("click",itemClicked());
+}
+
+
+// Begin: card list functions 
+function cardHover(){
+    const imgElement = this.firstElementChild.firstElementChild;
+    imgElement.classList.add("hovering");
+    // console.log(imgElement);
+}
+
+function cardHoverOut(){
+    const imgElement = this.firstElementChild.firstElementChild;
+    imgElement.classList.remove("hovering");
 }
 
 function itemClicked(){
     const index = event.currentTarget.getAttribute("data-item-id");
     const urlParas = new URLSearchParams();
-    urlParas.append("item-id",index)
+    urlParas.append("item-id",index);
     window.location.href = "item-detail.html?"+urlParas.toString();
+}
+
+function favToggle(){
+    if(this.firstElementChild.classList.contains("fa-heart-o")){
+        this.firstElementChild.classList.remove("fa-heart-o");
+        this.firstElementChild.classList.add("fa-heart");
+    }else{
+        this.firstElementChild.classList.remove("fa-heart");
+        this.firstElementChild.classList.add("fa-heart-o");
+    }
+}
+// End: card list functions 
+
+
+function placeOrder(){
+    alert("Order placed!");
 }
