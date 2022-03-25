@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- build:css css/main.css -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/styles.css">
     <!-- endbuild -->
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
@@ -22,18 +22,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2">
-                    <img src="img/Rebuild Electronics-logos.jpeg" alt="RE logo" class="img-fluid">
+                    <img src="../img/Rebuild Electronics-logos.jpeg" alt="RE logo" class="img-fluid">
                 </div>
                 <div class="col align-self-center">
                     <h1>Rebuild Electronics</h1>
                 </div>
                 <div class="dropdown mt-2">
                     <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-globe" aria-hidden="true"></i> Language
+                        <i class="fa fa-globe" aria-hidden="true"></i> 言語
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item active" href="#">English</a>
-                      <a class="dropdown-item" href="/jp/index.html" lang="jp">日本語</a>
+                      <a class="dropdown-item" href="../index.html">English</a>
+                      <a class="dropdown-item active" href="" lang="jp">日本語</a>
                     </div>
                   </div>
                 <div class="col col-md-3 col-xl-2">
@@ -46,16 +46,16 @@
     <!-- nav bar -->
     <nav class="navbar navbar-expand-sm navbar-light sticky-top">
         <div class="container">
-            <a href="#"><img src="img/Rebuild Electronics-logos.jpeg" height="30" width="30" alt=""></a>
+            <a href="#"><img src="../img/Rebuild Electronics-logos.jpeg" height="30" width="30" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#reNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="reNavbar">
                 <ul class="navbar-nav">
-                    <li class="navbar-item active"><a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                    <li class="navbar-item"><a class="nav-link" href="userform.html"><i class="fa fa-cube" aria-hidden="true"></i> Sell/Donate</a></li>
-                    <li class="navbar-item"><a class="nav-link" href="officialgear.html"><i class="fa fa-certificate" aria-hidden="true"></i> Official Gear</li></a>
-                    <li class="navbar-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a></li>
+                    <li class="navbar-item active"><a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> ホーム</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="userform.html"><i class="fa fa-cube" aria-hidden="true"></i> 売る・寄付</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="officialgear.html"><i class="fa fa-certificate" aria-hidden="true"></i> 公式グッツ</li></a>
+                    <li class="navbar-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info-circle" aria-hidden="true"></i> 会社について</a></li>
                 </ul>
                 <span class="navbar-text ml-auto">
                     <a role="button" data-toggle="modal" data-target="#cartModal">
@@ -93,7 +93,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3>Login</h3>
+                    <h3>ログイン</h3>
                     <button class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -101,32 +101,32 @@
                         <form>
                             <div class="form-row">
                                 <div class="form-group col-12">
-                                  <label class="sr-only col-form-label" for="loginEmail">Email Address</label>
+                                  <label class="sr-only col-form-label" for="loginEmail">メールアドレス</label>
                                   <input type="email" name="loginEmail" id="loginEmail" class="form-control form-control-sm" placeholder="Enter Email" required>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-12">
-                                  <label class="sr-only col-form-label" for="loginPassward">Password</label>
+                                  <label class="sr-only col-form-label" for="loginPassward">パスワード</label>
                                   <input type="password" name="password" id="loginPassword" class="form-control form-control-sm" placeholder="Password" required>
                                 </div>
                             </div>
                             <div class="form-check">
                               <label class="form-check-label">
                                 <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue">
-                                Remember me
+                                アドレスを保存する
                               </label>
                             </div>
                             <div class="form-row">
-                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                                <button type="submit" id="loginBtn" class="btn btn-primary btn-sm ml-1" disabled>Sign in</button>
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">キャンセル</button>
+                                <button type="submit" id="loginBtn" class="btn btn-primary btn-sm ml-1" disabled>ログイン</button>
                             </div>
                         </form>
                         
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a class="btn btn-link btn-sm" href="#" data-dismiss="modal">forgot your passsword?</a>
+                    <a class="btn btn-link btn-sm" href="#" data-dismiss="modal">パスワードリセット</a>
                 </div>
             </div>
         </div>
@@ -138,7 +138,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Your shopping cart</h5>
+                    <h5 class="modal-title">カートの中身</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -150,8 +150,8 @@
                     </ol>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <a role="button" class="btn btn-primary" href="checkout.html">Checkout</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                    <a role="button" class="btn btn-primary" href="checkout.html">支払いへ</a>
                 </div>
             </div>
         </div>
@@ -162,16 +162,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-2 offset-1">
-                    <h5>Links</h5>
+                    <h5>リンク</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="aboutus.html">About</a></li>
-                        <li><a href="userform.html">Sell/Donate</a></li>
-                        <li><a href="contactus.html">Officail Goods</a></li>
+                        <li><a href="#"> ホーム</a></li>
+                        <li><a href="aboutus.html"> 会社について</a></li>
+                        <li><a href="userform.html"> 売る・寄付</a></li>
+                        <li><a href="contactus.html"> 公式グッツ</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-sm-5 text-center">
-                    <h5>Social</h5>
+                    <h5>ソーシャルメディア</h5>
                     <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
                     <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
                     <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
@@ -186,10 +186,10 @@
     </footer>
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/script.js" type="module"></script>
+    <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../js/script.js" type="module"></script>
 
 </body>
 </html>
